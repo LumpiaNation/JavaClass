@@ -1,0 +1,13 @@
+A. What output is produced by the following statements?
+
+1. 
+    String greeting = "How do you do";
+    System.out.println(greeting + "Seven of Nine.");
+
+2. 
+    String test = "abcdefg";
+    System.outprintln(test.length());
+    System.out.println(test.charAt(1));
+
+3.
+    
