@@ -1,3 +1,5 @@
 1. Write Java code for taking the input of 2 numbers and then finding and displaying their sum, difference, product, quotient, and remainder.
 
 2. Write the Java code for taking the input of radius, and then finding and displaying the area and circumference of circle.
+
+adjustment
