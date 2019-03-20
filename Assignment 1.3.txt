@@ -1,0 +1,11 @@
+1. Write a Java program to take the input of three numbers and then find and display the largest of three numbers
+2. Write a Java program to take the input of scores of a student in 5 classes.
+    Calculate the student's average score and display it with 2 decimal places. Calculate the student's grade based on average score using the following criteria;
+
+    Average Score - grade
+    90 and above - E
+    80 - 89 - A,
+    70 - 79 - B,
+    60 - 69 - C,
+    50 - 59 - D,
+    Less than 50 - F,

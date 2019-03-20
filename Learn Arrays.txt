@@ -1,0 +1,97 @@
+Arrays
+
+Array - a special kind of object that is more useful to think of it as a collection of variables all of the same type
+Elements of the array are stored on consecutive memory locations, also know as subscripted variables
+
+    x; A[i] is the ith element of the array (i is subscript with varaible A).
+
+One - Dimensional Array; has one subscript, each element of an array occupies separate consecutive memory location
+also referred by its subscript (subscript of an array starts from 0 in Java)
+
+Syntax;
+Base_Type[] Array_Name = new Base_Type[Length];
+
+    The _Length_ may be given as any expression that evaluates to a nonnegative integer,
+    Length can be an int variable
+
+    Ex; new int[10-5], new int[5]
+
+    Ex; An array that consists of a colelction of seven variables of type double can be created like
+    double[] temperature = new double[7];
+
+    Imagine having declared seven strangely named variables that have type double
+    temperature[0], temperature[1], temperature[2], temperature[3], temperature[4], temperature[5], temperature[6]
+
+    The integer expression in the square brackets is called an index or a subscript
+    Remember, the numbering starts with 0 and not 1
+
+    Ex; 
+    double[] score = new double[5]
+
+    is really shorthand for;
+
+    double[] score;
+    score = new double[5];
+
+    More Ex;
+    char[] line = new char[80];
+    double[] reading new double[300];
+    Person[] specimen = new Person [100]  //Person is a class
+
+Using a named constant when defining an array;
+    Can use named constants as the size of the array.
+
+    Ex; public static final int NUMBER_OF_READINGS = 100;
+    int[] pressure = new int[NUMBER_OF_READINGS];
+
+Specifying array size at declaration time;
+    Java allocated memory for an array as well as for any other object, at execution time
+    This means you can read the array's length from the keyboard if you don't know how large to make the array
+
+    Ex; System.out.println("How many temperatures do you have?");
+    int size = keyboard.nextInt();
+    double[] temperature = new double[size];
+
+    Each of the indexed variables of an array can be used just like any other variable
+
+    Ex; score[3] = 32;
+    score[0] = score[3] + 10;
+    System.out.println(score[0]);
+
+Instance Variable length;
+    Arrays have only one public instance variable, the variable "length" is equal to the length of the array
+
+    Ex; Species[] entry = new Species[20];
+    System.out.println("Length of array=" + entry.length);
+    
+    The statement will print out
+        Length of array=20
+
+Length is a final variable;
+    Cannot assign a value to instance variable length, the following attempt to change the size of the array is invalid
+    entry.length = 10; //Illegal!
+
+Array indices must be within bounds to be valid;
+    Index of the first element in a Java array is always 0 and the last index number is not the length of the array;
+    But is one less than the length of the array. Be sure that the indices stay within the range
+    Array index that is less than 0 or greater than or equal to the size of the array will cause an error message during program execution
+
+Initializing Arrays;
+    Arrays can be initialized at the time it is being declared. To do so you enclose the values for individual indexed variables in braces and place them after the assignment operator
+
+    Ex; double[] reading = {3.3, 15.8, 9.7};
+
+    The size of the array is set to the minimum that will hold the given values. The following is equivalent to the above
+
+    Ex; double[] reading = new double[3];
+    reading[0] = 3.3;
+    reading[1] = 115.8;
+    reading[2] = 9.7;
+
+Arrays can be used as instance variables in classes:
+    Indexed Variables or an entire array can be used as an argument in methods. Methods can also return an array.
+    Since arrays are objects, classes and methods can use arrays just as any other object
+
+Auto Initialization:
+    If the elements of an array are not initialized they will be initialized to the default value for the base type.
+    
