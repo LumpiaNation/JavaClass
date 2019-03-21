@@ -1,40 +1,56 @@
 public class Grading
 {
-    double quizA, quizB, quizC, midterm, finalTest, overallScore;
-    String Grade;
+    private double quizA, quizB, quizC, midterm, finalTest, overallScore;
+    private String Grade;
     
-    double x;
-    Boolean A = ((90 < x) && (x <= 100 ));
-    Boolean B = ((80 < x) && (x <= 89 ));
-    Boolean C = ((70 < x) && (x <= 79 ));
-    Boolean D = ((60 < x) && (x <= 69 ));
-    Boolean F = (x <= 59 );
+    private double x;
+    // ((90 < x) && (x <= 100 ))
+    // ((80 < x) && (x <= 89 ))
+    // ((70 < x) && (x <= 79 ))
+    // ((60 < x) && (x <= 69 ))
+    // (x <= 59 );
 
     public Grading(int userquizA, int userquizB, int userquizC)
     {
-        quizA = (userquizA/100);
-        quizB = (userquizB/100);
-        quizC = (userquizC/100);
+        quizA = ((userquizA/10)/100);
+        quizB = ((userquizB/10)/100);
+        quizC = ((userquizC/10)/100);
     }
     public Grading(double userMidterm,double userFinal)
     {
         midterm = (userMidterm/100);
         finalTest = (userFinal/100);
     }
+    public double calcQuiz()
+    {
+        double quizTotal = (((quizA/3)+(quizB/3)+(quizC/3))*(25));
+        return(quizTotal);
+    }
 
     public void calcOverall()
     {
-        overallScore = ((midterm*35) + (finalTest*40) + (/*quiz here*/));
+        overallScore = ((midterm*35) + (finalTest*40) + (calcQuiz()));
+        x = overallScore;
     }
 
-    public void calcLetter()
+    public String getLetter()
     {
-        if(())
+        if (((90 < x) && (x <= 100 )))
+        {
+            return(System.out.println("A"));
+        }
     }
+    // public boolean equals()
+    // {
+    //     if((overallScore.equals(C)))
+    //     {
+    //         return;
+    //     }
+    // }
 
     public String toString()
     {
-        return("The grade you got is " + Grade);
+        return("The grade you got is " + equals());
     }
 
 

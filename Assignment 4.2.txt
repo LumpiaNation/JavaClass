@@ -25,8 +25,8 @@ Any grade of 90 or more is an A, any grade of 80 or more (but less than 90) is a
 Define and use a class for the student record. The class should have instance variables for the quizzes, midterm, final, overall numeric score for the
  course, and final letter grade. The overall numeric score is a number in the range 0 to 100, which represents the weighted average of the student’s work. 
  The class should have methods to compute the overall numeric grade and the final letter grade. These last methods should be void methods that set the 
- appropriate instance variables. Your class should have a reasonable set of accessor and mutator methods, an equals method, and a toString method, whether 
- or not your program uses them. You may add other methods if you wish.
+ appropriate instance variables. Your class should have a reasonable set of accessor and mutator methods, an equals method, and a toString method. 
+ You may add other methods if you wish.
 
  
 
