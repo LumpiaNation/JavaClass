@@ -1,0 +1,45 @@
+1. Define a class called Odometer that will be used to track fuel and mileage for an automobile. The class should have instance variables to track the miles 
+driven and the fuel efficiency of the vehicle in miles per gallon. Include a mutator method to reset the odometer to zero miles, a mutator method to set the
+ fuel efficiency, a mutator method that accepts miles driven for a trip and adds it to the odometer’s total, and an accessor method that returns the number 
+ of gallons of gasoline that the vehicle has consumed since the odometer was last reset.
+
+Use your class with a test program that creates several trips with different fuel efficiencies. You should decide which variables should be public, if any.
+
+ 
+
+2. Write a grading program for a class with the following grading policies:
+
+There are three quizzes, each graded on the basis of 10 points.
+
+There is one midterm exam, graded on the basis of 100 points.
+
+There is one final exam, graded on the basis of 100 points.
+
+The final exam counts for 40% of the grade. The midterm counts for 35% of the grade. The three quizzes together count for a total of 25% of the grade. 
+(Do not forget to convert the quiz scores to percentages before they are averaged in.)
+
+Any grade of 90 or more is an A, any grade of 80 or more (but less than 90) is a B, any grade of 70 or more (but less than 80) is a C, any grade of 60
+ or more (but less than 70) is a D, and any grade below 60 is an F. The program should read in the student’s scores and output the student’s record, 
+ which consists of three quiz scores and two exam scores, as well as the student’s overall numeric score for the entire course and final letter grade.
+
+Define and use a class for the student record. The class should have instance variables for the quizzes, midterm, final, overall numeric score for the
+ course, and final letter grade. The overall numeric score is a number in the range 0 to 100, which represents the weighted average of the student’s work. 
+ The class should have methods to compute the overall numeric grade and the final letter grade. These last methods should be void methods that set the 
+ appropriate instance variables. Your class should have a reasonable set of accessor and mutator methods, an equals method, and a toString method, whether 
+ or not your program uses them. You may add other methods if you wish.
+
+ 
+
+3. Write a Temperature class that has two instance variables: a temperature value (a floating-point number) and a character for the scale, either C for
+ Celsius or F for Fahrenheit. The class should have four constructor methods: one for each instance variable (assume zero degrees if no value is specified
+  and Celsius if no scale is specified), one with two parameters for the two instance variables, and a no-argument constructor (set to zero degrees Celsius). 
+  Include the following: (1) two accessor methods to return the temperature—one to return the degrees Celsius, the other to return the degrees Fahrenheit—use 
+  the following formulas to write the two methods, and round to the nearest tenth of a degree:
+
+DegreesC=5(degreesF−32)/9DegreesF=(9(degreesC)/5+32);
+(2) three mutator methods: one to set the value, one to set the scale (F or C), and one to set both; (3) three comparison methods: an equals method to test
+ whether two temperatures are equal, one method to test whether one temperature is greater than another, and one method to test whether one temperature is less 
+ than another (note that a Celsius temperature can be equal to a Fahrenheit temperature as indicated by the above formulas); and (4) a suitable toString method. 
+ Then write a driver program (or programs) that tests all the methods. Be sure to use each of the constructors, to include at least one true and one false case 
+ for each of the comparison methods, and to test at least the following temperature equalities: 0.0 degrees C = 32.0 degrees F, –40.0 degrees C = –40.0 degrees F,
+  and 100.0 degrees C = 212.0 degrees F.
