@@ -2,7 +2,7 @@ public class Grading
 {
     private double quizA, quizB, quizC, midterm, finalTest, overallScore;
     private String Grade;
-    
+    private String passIng;
     private double x;
     // ((90 < x) && (x <= 100 ))
     // ((80 < x) && (x <= 89 ))
@@ -35,10 +35,51 @@ public class Grading
 
     public String getLetter()
     {
-        if (((90 < x) && (x <= 100 )))
+        
+        if ((90 < x) && (x <= 100 ))
         {
-            return(System.out.println("A"));
+            Grade = "A";
         }
+        else if(((80 < x) && (x <= 89 )))
+        {
+            Grade = "B";
+        }
+        else if((70 < x) && (x <= 79 ))
+        {
+            Grade = "C";
+        }
+        else if((60 < x) && (x <= 69 ))
+        {
+            Grade = "D";
+        }
+        else if(x <= 59 )
+        {
+            Grade = "F";
+        }
+        return(Grade);
+    }
+    public Boolean equals()
+    {
+        if((Grade == "C") || (Grade == "B") || (Grade == "A") )
+        {
+            return(true);
+        }
+        else
+        {
+            return(false);
+        }
+    }
+    public String passGrade()
+    {
+        if (equals() == true)
+        {
+            passIng = ("have passed!");
+        }
+        else
+        {
+            passIng = ("have not passed.");
+        }
+        return(passIng);
     }
     // public boolean equals()
     // {
@@ -50,7 +91,7 @@ public class Grading
 
     public String toString()
     {
-        return("The grade you got is " + equals());
+        return("The grade Gradeo got is " + Grade + " and you " +);
     }
 
 
@@ -58,8 +99,9 @@ public class Grading
     
 }
 
-// For the equals method just have the overall score equal to a variable
-//then cross check for it to see if it matches any of the boolean values
+// Equals Method: Setup will be different and will instead return a true or false
+//value and if true the toString will return passed, if not true the toString will return false
+//toString will invoke the method to check for true or false
 
 
 // Constructors
@@ -77,4 +119,4 @@ public class Grading
 // Grades get calculated
 // Number calculated gets assigned
 // Number assigned gets cross checked with each of the Grade letters
-// System prints out the output
+// SGradestem prints out the output
