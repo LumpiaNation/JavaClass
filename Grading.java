@@ -2,34 +2,35 @@ public class Grading
 {
     private double quizA, quizB, quizC, midterm, finalTest, overallScore;
     private String Grade;
-    private String passIng;
-    private double x;
+    private String passIng, gradeTemp;
+    private double x, quizTotal;
     // ((90 < x) && (x <= 100 ))
     // ((80 < x) && (x <= 89 ))
     // ((70 < x) && (x <= 79 ))
     // ((60 < x) && (x <= 69 ))
     // (x <= 59 );
 
-    public Grading(int userquizA, int userquizB, int userquizC)
+    //Constructor
+    public Grading(int userquizA, int userquizB, int userquizC,double userMidterm,double userFinal)
     {
-        quizA = ((userquizA/10)/100);
-        quizB = ((userquizB/10)/100);
-        quizC = ((userquizC/10)/100);
+        quizA = ((userquizA));
+        quizB = ((userquizB));
+        quizC = ((userquizC));       
+         midterm = (userMidterm);
+        finalTest = (userFinal);
+
     }
-    public Grading(double userMidterm,double userFinal)
-    {
-        midterm = (userMidterm/100);
-        finalTest = (userFinal/100);
-    }
+
     public double calcQuiz()
     {
-        double quizTotal = (((quizA/3)+(quizB/3)+(quizC/3))*(25));
+        quizTotal = (((quizA)+(quizB)+(quizC))*(.25));
         return(quizTotal);
     }
 
     public void calcOverall()
     {
-        overallScore = ((midterm*35) + (finalTest*40) + (calcQuiz()));
+
+        overallScore = ((midterm*.35) + (finalTest*.40) + (quizTotal));
         x = overallScore;
     }
 
@@ -56,18 +57,20 @@ public class Grading
         {
             Grade = "F";
         }
+        gradeTemp = Grade;
         return(Grade);
     }
     public Boolean equals()
     {
-        if((Grade == "C") || (Grade == "B") || (Grade == "A") )
+        if((gradeTemp == "C") || (gradeTemp == "B") || (gradeTemp == "A") )
         {
-            return(true);
+            return(true); 
         }
-        else
+        else if(gradeTemp == "D" || gradeTemp == "F");
         {
             return(false);
         }
+                  
     }
     public String passGrade()
     {
@@ -91,7 +94,12 @@ public class Grading
 
     public String toString()
     {
-        return("The grade Gradeo got is " + Grade + " and you " +);
+        calcQuiz();
+        calcOverall();
+        getLetter();
+        equals();
+
+        return("The grade Grade you got is " + Grade + " and you " + passGrade());
     }
 
 
