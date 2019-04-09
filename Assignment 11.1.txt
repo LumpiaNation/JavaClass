@@ -1,0 +1,27 @@
+Create a class called Vehicle, that has the manufacturer's name(type String),
+number of cylinders in the engine (type int), and owner (type Person given next).
+Then, create a class called Truck that is derived from Vehicle and has the following additional properties: 
+the load capacity in tons(type double since it may contain a fractional part) and towing capacity
+in pounds (type int). Be sure your class has a reasonable completement of constructors, accessor and mutator
+methods, and suitably define equals and toString methods. Write a programs to test all your methods
+The definition of the class Person follows. Completiting the definitions of the methods is 
+part of this programming projects.
+
+public class Person
+{
+   private String name;
+   public Person()
+   {...}
+   public Person(String theName)
+   {...}
+   public Person(Person theObject)
+   {...}
+   public String getName()
+   {...}
+   public void setName(String theName)
+   {...}
+   public String toString()
+   {...}
+   public boolean equals(Object other)
+   {...}
+}
