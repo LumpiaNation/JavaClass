@@ -41,4 +41,31 @@ public class Vehicle
         this.owner = owner;
     }
     
+    public boolean equals(Object obj)
+    {
+        if(this == obj)
+        return true;
+        if(obj == null)
+        return false;
+        if(!(obj instanceof Vehicle))
+        return false;
+        Vehicle other = (Vehicle) obj;
+        if(manufactName == null)
+        {
+            if(other.manufactName != null)
+            return false;
+        }
+        else if (!manufactName.equals(other.manufactName))
+        return false;
+        if(numberCyl != other.numberCyl)
+        return false;
+        if(owner == null)
+        {
+            if(other.owner != null)
+            return false;
+        }
+        else if(!owner.equals(other.owner))
+        return false;
+        return true;
+    }
 }
